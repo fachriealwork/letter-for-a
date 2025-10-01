@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Happy Birthday Anissa!</title>
+  <link rel="icon" href="https://i.ibb.co.com/hXZsYxZ/heart.png">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #1e3a8a;
+      font-family: 'Nunito', sans-serif;
+      overflow: hidden;
+    }
+
+    .page {
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1s ease;
+    }
+
+    .page.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    h1 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      color: #1e3a8a;
+      font-weight: bold;
+    }
+
+    .button {
+      background-color: #1e3a8a;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background-color: #2c4ca5;
+    }
+
+    img {
+      max-width: 70vw;
+      max-height: 50vh;
+      margin-bottom: 20px;
+    }
+
+    .letter {
+      white-space: pre-line;
+      font-size: 1.1rem;
+      max-width: 600px;
+      text-align: left;
+      border-left: 3px solid #1e3a8a;
+      padding-left: 15px;
+      min-height: 200px;
+    }
+
+    .falling {
+      position: fixed;
+      top: -30px;
+      font-size: 24px;
+      animation: fall linear infinite;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .blue-heart {
+      color: #1e3a8a;
+    }
+
+    .yellow-star {
+      color: #facc15;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+        font-size: 1.5rem;
+      }
+
+      .button {
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
+
+      .letter {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page active" id="page1">
+    <img src="1.gif" alt="Cute Icon" />
+    <h1>Happy Birthday <span class="highlight">Anissa! ˶ᵔ ᵕ ᵔ˶ ♡</span></h1>
+    <p>your next surprise is just a click away ✨</p>
+    <button class="button" onclick="goToPage(2)">tap me!</button>
+  </div>
+
+  <div class="page" id="page2">
+    <img src="write.gif" alt="Envelope" />
+    <p>knock knock .. open me up!</p>
+    <button class="button" onclick="goToPage(3)">open it!</button>
+  </div>
+
+  <div class="page" id="page3" style="font-family: 'Nunito', sans-serif;">
+    <h2> Hi, Anissa! .ᐟ </h2>
+        <div class="letter" id="letterText"></div>
+        <a href="https://open.spotify.com/playlist/4vPS7S79qUrZi866t07OUD" target="_blank" rel="noopener noreferrer" class="button" style="display: inline-block; text-decoration: none; margin-top: 20px;">
+          🎵 listen me,                                                                                      pls!
+        </a>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const fullLetter = `First of all, happy birthday! Mungkin pas kamu baca ini sudah lewat beberapa hari setelah ulang tahunmu. Sorry, lately aku agak sibuk kerja. Pas kamu baca ini mungkin aku sudah libur atau bisa nyempetin waktu. Doanya mungkin nggak jauh beda dari yang aku kirim pas ulang tahun kemarin—intinya semoga kamu bahagia terus ke depannya. Semoga impian, cita-cita, dan harapanmu semakin didekatkan.
+
+Thank you udah banyak bantu di event Agustus kemarin. Kalau nggak ada sekretaris josjis, paling batal itu event. Makasih sudah mau direpotkan dan banyak menghabiskan waktu, tenaga, pikiran, atau mungkin materi yang keluar.
+
+Anyway, aku tetap harus say sorry untuk apa yang terjadi di akhir tahun kemarin. Semua terjadi karena anxiety dan ketakutanku untuk menyampaikan sesuatu dalam bentuk tulisan yang nggak sesuai dengan apa yang aku maksud. Jadi aku pilih diam dan berusaha ngajak ngobrol, tapi mungkin kamu sudah terlanjur marah dan muak sampai nggak available untuk bahas lagi.
+
+Tapi dari masalah itu aku sadar: nggak semua yang menurut kita benar itu bisa diterima orang lain. Dulu aku kekeh harus ketemu untuk jelasin semuanya, tapi ternyata nggak semua harus nurutin apa yang aku mau. Jadi aku harus belajar. Aku mulai baca buku dan nulis jurnal untuk expressing my emotions. Dulu aku cuma bisa mendem dan nerima keadaan aja. Aku dulu bingung gimana meluapkan rasa senang, marah, sedih. Mungkin aku terlihat lempeng dengan apa pun yang terjadi, tapi aku mulai bisa mengekspresikan diri lewat tulisan. Lihat ini, aku bisa nulis sepanjang ini kan? Kamu tahu sendiri aku dulu paling males ngetik gini, hehe.
+
+Untuk masalah aku dan dia, sudah selesai dan nggak ada yang bisa dibahas lagi. Mungkin kamu masih lihat di IG dia masih ada aku, but I swear to God, I'm done with her.
+
+Aku mau perbaiki semua, tapi kayaknya cukup impossible. Mungkin kamu sudah nyaman sendiri atau mungkin sudah ada orang yang ngisi. But I miss when we were strolling around the city, buying telur gulung, ngobrol ngalur ngidul nggak jelas. I love watching & listening to you tell a story, walaupun kadang kepotong gara-gara tiba-tiba nggak mood cerita. Pokoknya hal-hal absurd itu. I was dreaming we could grow up day by day, go to concerts, watch movies, and go to restaurants we loved, hehehe.
+
+Thank you for becoming the reason I'm still holding on until now. With or without me, I hope happiness stays around you. If I can't be on your side, let me see you from afar. Oh ya, I made a playlist for you. Maybe it's not on your genre spectrum, but the lyrics have a personal meaning to you. Mungkin bisa didengar sambil nugas atau rebahan di kamar.
+
+Once again, happy birthday Anissa. Stay blooming every day! If not for me, at least for someone you love! 🌻`;
+
+
+    function goToPage(pageNum) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(p => p.classList.remove('active'));
+      const next = document.getElementById(`page${pageNum}`);
+      next.classList.add('active');
+
+      if (pageNum === 3) {
+
+
+
+
+        confetti({particleCount: 150, spread: 100, origin: {y: 0.6}});
+        typeText(fullLetter, document.getElementById('letterText'), 25);
+        startFallingSymbols();
+      }
+    }
+
+    function typeText(text, element, speed) {
+      element.innerHTML = '';
+      let i = 0;
+      function type() {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      type();
+    }
+
+    function startFallingSymbols() {
+      setInterval(() => {
+        const el = document.createElement('div');
+        el.classList.add('falling');
+        const isHeart = Math.random() < 0.5;
+        el.innerText = isHeart ? '💙' : '⭐';
+        el.classList.add(isHeart ? 'blue-heart' : 'yellow-star');
+        el.style.left = Math.random() * 100 + 'vw';
+        el.style.animationDuration = (3 + Math.random() * 2) + 's';
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 6000);
+      }, 300);
+    }
+  </script>
+</body>
+
+</html>
